@@ -5,14 +5,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-Biography
-======
+# Biography
 I am currently a Ph.D. student in the Department of Electronic Engineering at City University of Hong Kong. I received my M.Eng. and B.Eng. degrees from the School of Computer Science and Technology, Xidian University, Xi’an, China, in 2025 and 2022, respectively, under the supervision of Prof. Mingtao Feng. My research focuses on 3D computer vision, particularly in areas such as point cloud registration and 3D scene graph.
 
-Publications
-======
-```markdown
+# Publications
+
 1. ### Discriminative correspondence estimation for unsupervised RGB-D point cloud registration  
 **Chenbo Yan**, Mingtao Feng, Zijie Wu, Yulan Guo, Weisheng Dong, Yaonan Wang, Ajmal Mian
 IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024
