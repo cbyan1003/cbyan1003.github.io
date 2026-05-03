@@ -59,6 +59,29 @@
     font-size: 1em;
   }
 
+  .publication-list {
+    margin-top: 1em;
+  }
+
+  .publication-item {
+    margin-bottom: 1.4em;
+  }
+
+  .publication-title {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+  }
+
+  .publication-authors,
+  .publication-venue,
+  .publication-links {
+    margin-bottom: 0.2em;
+  }
+
+  .publication-venue {
+    color: var(--global-text-color-light);
+  }
+
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;

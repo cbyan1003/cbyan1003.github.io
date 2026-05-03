@@ -10,14 +10,4 @@ I am currently a Ph.D. student in the Department of Electronic Engineering at Ci
 
 # Publications
 
-1. ### Discriminative correspondence estimation for unsupervised RGB-D point cloud registration  
-**Chenbo Yan**, Mingtao Feng, Zijie Wu, Yulan Guo, Weisheng Dong, Yaonan Wang, Ajmal Mian
-IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024
-
-2. ### Hyperrectangle Embedding for Debiased 3D Scene Graph Prediction from RGB Sequences  
-Mingtao Feng, **Chenbo Yan**, Zijie Wu, Weisheng Dong, Yaonan Wang, Ajmal Mian  
-IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2025
-
-3. ### History-Enhanced 3D Scene Graph Reasoning from RGB-D Sequences  
-Mingtao Feng, **Chenbo Yan**, Zijie Wu, Weisheng Dong, Yaonan Wang, Ajmal Mian  
-IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2025
+{% include publications-home.html %}

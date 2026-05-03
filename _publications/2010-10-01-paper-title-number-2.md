@@ -1,4 +1,5 @@
 ---
+show_on_homepage: false
 title: "Paper Title Number 2"
 collection: publications
 category: manuscripts

@@ -1,0 +1,39 @@
+<div class="publication-list">
+{% assign homepage_publications = site.publications | where: "show_on_homepage", true | sort: "date" | reverse %}
+{% for post in homepage_publications %}
+  <div class="publication-item">
+    <p class="publication-title">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">{{ post.title }}</a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </p>
+
+    {% if post.authors %}
+      <p class="publication-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endif %}
+
+    <p class="publication-venue">
+      <em>{% if post.venue_short %}{{ post.venue_short }}{% else %}{{ post.venue }}{% endif %}</em>,
+      {{ post.date | date: "%Y" }}
+      {% if post.labels %}
+        · {{ post.labels | join: " · " }}
+      {% endif %}
+      {% if post.esi_highly_cited %}
+        · ESI Highly Cited
+      {% endif %}
+    </p>
+
+    {% if post.paperurl or post.codeurl or post.projecturl or post.bibtexurl %}
+      <p class="publication-links">
+        {% assign has_previous_link = false %}
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% assign has_previous_link = true %}{% endif %}
+        {% if post.codeurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.codeurl }}">Code</a>{% assign has_previous_link = true %}{% endif %}
+        {% if post.projecturl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.projecturl }}">Project</a>{% assign has_previous_link = true %}{% endif %}
+        {% if post.bibtexurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+      </p>
+    {% endif %}
+  </div>
+{% endfor %}
+</div>
