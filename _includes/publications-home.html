@@ -10,18 +10,16 @@
       {% endif %}
     </p>
 
-    {% if post.authors %}
-      <p class="publication-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-    {% endif %}
-
-    <p class="publication-venue">
-      <em>{% if post.venue_short %}{{ post.venue_short }}{% else %}{{ post.venue }}{% endif %}</em>,
-      {{ post.date | date: "%Y" }}
+    <p class="publication-meta">
+      {% if post.authors %}
+        <span class="publication-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      {% endif %}
+      <span class="publication-venue"><em>{% if post.venue_short %}{{ post.venue_short }}{% else %}{{ post.venue }}{% endif %}</em>, {{ post.date | date: "%Y" }}</span>
       {% if post.labels %}
-        · {{ post.labels | join: " · " }}
+        <span class="publication-tag">{{ post.labels | join: " · " }}</span>
       {% endif %}
       {% if post.esi_highly_cited %}
-        · ESI Highly Cited
+        <span class="publication-tag publication-tag--award">ESI Highly Cited</span>
       {% endif %}
     </p>
 
