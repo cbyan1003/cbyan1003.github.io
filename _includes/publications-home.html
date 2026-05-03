@@ -15,17 +15,16 @@
       {% if post.esi_highly_cited %}
         <span class="publication-tag--award">ESI Highly Cited</span>
       {% endif %}
+      {% if post.paperurl or post.codeurl or post.projecturl or post.bibtexurl %}
+        <span class="publication-inline-links">
+          {% assign has_previous_link = false %}
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% assign has_previous_link = true %}{% endif %}
+          {% if post.codeurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.codeurl }}">Code</a>{% assign has_previous_link = true %}{% endif %}
+          {% if post.projecturl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.projecturl }}">Project</a>{% assign has_previous_link = true %}{% endif %}
+          {% if post.bibtexurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+        </span>
+      {% endif %}
     </p>
-
-    {% if post.paperurl or post.codeurl or post.projecturl or post.bibtexurl %}
-      <p class="publication-links">
-        {% assign has_previous_link = false %}
-        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% assign has_previous_link = true %}{% endif %}
-        {% if post.codeurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.codeurl }}">Code</a>{% assign has_previous_link = true %}{% endif %}
-        {% if post.projecturl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.projecturl }}">Project</a>{% assign has_previous_link = true %}{% endif %}
-        {% if post.bibtexurl %}{% if has_previous_link %} · {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
-      </p>
-    {% endif %}
   </div>
 {% endfor %}
 </div>

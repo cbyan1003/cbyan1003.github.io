@@ -95,13 +95,15 @@
 
   .publication-venue,
   .publication-tag,
-  .publication-tag--award {
+  .publication-tag--award,
+  .publication-inline-links {
     flex: 0 0 auto;
   }
 
   .publication-authors::after,
   .publication-venue::after,
-  .publication-tag::after {
+  .publication-tag::after,
+  .publication-tag--award::after {
     content: "·";
     margin-left: 0.35em;
     color: var(--global-text-color-light);
