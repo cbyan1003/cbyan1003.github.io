@@ -4,10 +4,11 @@
   <div class="publication-item">
     <p class="publication-title">{{ post.title | strip_html }}</p>
 
+    {% if post.authors %}
+      <p class="publication-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endif %}
+
     <p class="publication-meta">
-      {% if post.authors %}
-        <span class="publication-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-      {% endif %}
       <span class="publication-venue"><em>{% if post.venue_short %}{{ post.venue_short }}{% else %}{{ post.venue }}{% endif %}</em>, {{ post.date | date: "%Y" }}</span>
       {% if post.labels %}
         <span class="publication-tag">{{ post.labels | join: " · " }}</span>
